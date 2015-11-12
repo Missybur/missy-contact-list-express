@@ -1,0 +1,7 @@
+# missy-contact-list-express
+
+<<<<<<< HEAD
+Cd into project and do "npm run setup" to install dependencies listed in the package.json and bower.json.  Start the server in Node.
+=======
+Cd into project and do "npm run setup" to install dependencies listed in the package.json and bower.json. Start the server in Node.
+>>>>>>> 24e631e2265bc4af51c93e7cd7b9dd25483de020

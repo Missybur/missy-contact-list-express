@@ -10,6 +10,12 @@ router.get('/', function(req, res){
   Contact.find(function(err, contacts) {
     console.log(contacts)
     if(err) return res.status(400).send(err);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    res.render("index", {title: "Contact List", items: contacts});
+=======
+=======
+>>>>>>> 24e631e2265bc4af51c93e7cd7b9dd25483de020
     res.render("index", {title: "My Contacts!", items: contacts});
   });
 });
@@ -19,6 +25,10 @@ router.post("/", function(req, res){
   console.log("hello")
   Contact.create(contact, function(err){
     res.status(err ? 400 : 200).send(err || "contact create");
+<<<<<<< HEAD
+>>>>>>> c6d5e1d08bfc6c6696f7d172968bc66f84f86137
+=======
+>>>>>>> 24e631e2265bc4af51c93e7cd7b9dd25483de020
   });
 });
 

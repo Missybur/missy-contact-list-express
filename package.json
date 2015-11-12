@@ -4,15 +4,21 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "postinstall": "bower i",
+=======
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+>>>>>>> c6d5e1d08bfc6c6696f7d172968bc66f84f86137
     "setup": "npm i && bower i"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "bower": "^1.6.5",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "morgan": "^1.6.1"

@@ -1,5 +1,3 @@
-(function(){
-
   'use strict';
 
   $(document).ready(init);
@@ -9,7 +7,6 @@
 
   function init() {
     $('#add').click(addContact);
-    $('#list').on('change', 'input', checkboxChanged);
     $('#list').on('click', '.remove', removeContact);
     $("#list").on("click", ".edit", editContact);
   }
@@ -21,23 +18,20 @@
     var index = $targetRow.index();
     contacts.splice(index, 1);
 
-    updateList();
+    //updateList();
     saveLocalStorage();
+    location.reload();
+
   }
 
   function editContact(e){
-
-  }
-
-  function checkboxChanged(e) {
     var $target = $(e.target);
-    var $targetRow = $target.closest('tr');
+    var $targetRow = $target.closest('tr').addClass("editor");
 
     var index = $targetRow.index();
-    contacts[index].completed = $target.is(':checked');
-
-    updateList();
-    saveLocalStorage();
+    document.getElementById("editor").addEventListener("input", function() {
+      sweetAlert("Click on the input box that you would like to edit.")
+    }, false);
   }
 
   function addContact() {
@@ -54,19 +48,21 @@
       deleted: false
     };
     contacts.push(contact);
-    updateList();
-    saveLocalStorage();
+    // updateList();
+    // saveLocalStorage();
+    location.reload();
   }
 
   function updateList() {
     console.log('contacts:', contacts);
-    $('#list').empty();
+    //$('#list').empty();
 
     if(contacts.length){
       $('table.table').show();
     } else {
       $('table.table').hide();
     }
+        //location.reload();
 
     var contactElements = contacts.map(function(contact){
       var $tr = $('#sample').clone();
@@ -92,4 +88,3 @@
   }
 
 
-})();

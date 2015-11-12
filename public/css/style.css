@@ -1,9 +1,16 @@
 body {
   text-align: center;
-  background-color: #B5E555;
-  color: #8EC447;
+  background-color: #7FC7BD;
+  color: #fff;
   font-family: 'Lora', serif;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+
+label {
+  color: #fff;
+  font-size: 10px;
+  margin: 5px;
 }
 
 h1 {
@@ -16,28 +23,35 @@ h1 {
   text-align: center;
 }
 
+.remove:hover {
+  color: red;
+}
+
 div {
   padding: 10px;
-  /*padding-top: 20px;*/
+}
+
+.row {
+  border: 2px solid #fff;
 }
 
 table, #sample {
   padding-top: 15px;
   display: none;
   color: #8EC447;
-  border: 2px solid #B5E555;
+  border: 2px solid #fff;
 
 }
 
 th {
 
   text-align: center;
-  border: 2px solid #B5E555;
+  border: 2px solid #fff;
 
 }
 
 .table {
-  border: 3px solid #7FC7BD;
+  border: 3px solid #fff;
   text-align: left;
   background-color: #fff;
 
@@ -65,6 +79,10 @@ tr, th {
   border: #CDFF00;
 }
 
+.edit:hover {
+  color: green;
+}
+
 #list {
   border: 2px solid #B5E555;
 
@@ -72,17 +90,19 @@ tr, th {
 
 input {
   background-color: #7FC7BD;
-  border: 2px solid #EDF7F2;
+  border: 2px solid #95C92C;
   font-size: 30px;
-  margin: 10px;
   text-align: center;
   color: #EDF7F2;
   display: #EDF7F2;
+  width: 100px;
+  height: 40px;
 }
 
 #firstName, #lastName, #phoneNumber, #email {
   width: 200px;
   height: 40px;
   margin: 20px;
+  border: 2px solid #95C92C;
   font-size: 15px;
 }

@@ -1,3 +1,41 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     title= title
+//-     link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+//-     link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+//-     link(href="css/style.css", rel='stylesheet')
+
+//-   body
+//-     .container
+//-       - var properties = ["firstName", "lastName", "phoneNumber", "email"]
+//-       .row
+//-         h1= title
+//-       .row
+//-         each prop in properties
+//-           label #{prop.toUpperCase()}:
+//-           input(id= prop)
+//-         button.btn#add Add
+//-       .row
+//-         table.table.table-hover
+//-           thead
+//-             tr
+//-               each prop in properties
+//-                 th= prop
+//-               th: th
+//-           tbody#list
+//-             each item, index in items
+//-               tr
+//-                 each prop in properties
+//-                   td(class= prop, id= prop)= items[index][prop]
+//-                 td.edit.text-center
+//-                   i.fa.fa-pencil-square-o.fa-lg
+//-                 td.delete.text-center
+//-                   i.fa.fa-trash-o.fa-lg
+
+//-     script(src='bower_components/jquery/dist/jquery.min.js')
+//-     script(src='js/contacts/main.js')
+
 doctype html
 html(lang='en')
   head
@@ -6,18 +44,21 @@ html(lang='en')
     link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet', integrity='sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
     link(href='https://fonts.googleapis.com/css?family=Alice|Lora', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    //- link(rel='stylesheet', type='text/css', href='public/bower_components/dist/sweetalert.css')
     link(rel='stylesheet', href='css/style.css')
-  body
+
+ body
     .container
-      h1 Contact List
-    .container#table
-      //- input.col-xs-3(placeholder="First Name")
-      input#firstName(class="col-xs-3" type='text', placeholder='First Name')
-      input#lastName(class="col-xs-3" type='text', placeholder='Last Name')
-      input#phoneNumber(class="col-xs-3" type='text', placeholder='xxx-xxx-xxxx')
-      input#email(type='email', placeholder='Email')
-      button#add.btn.btn-default Add
-      table.table.table-bordered
+      - var properties = ["firstName", "lastName", "phoneNumber", "email"]
+      .row
+        h1= title
+      .row
+        each prop in properties
+          label #{prop.toUpperCase()}:
+          input(id= prop)
+        button.btn#add Add
+        .container
+        table
         thead
           tr
             th.col-xs-1 Edit
@@ -27,6 +68,7 @@ html(lang='en')
             th.col-xs-3 Email:
             th.col-xs-1 Remove
         tbody#list
+<<<<<<< HEAD
         tr#sample
           td.edit
             a.edit(href="#")
@@ -38,7 +80,22 @@ html(lang='en')
           td.remove
             a.remove(href='#')
               i.fa.fa-trash-o
+=======
+          each item in items
+            table
+            thead
+              tr
+                td.col-xs-1=item.firstName
+                td=item.lastName
+                td=item.phoneNumber
+                td.edit.text-center
+                  i.edit.fa.fa-pencil-square-o.fa-lg
+                td.remove.text-center
+                  i.remove.fa.fa-trash-o.fa-lg
+
+>>>>>>> c6d5e1d08bfc6c6696f7d172968bc66f84f86137
   block scripts
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
-    script(src='js/main.js')
+    //- script(src='public/bower_components/dist/sweetalert.min.js')
+    script(src='js/contacts/main.js')

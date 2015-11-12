@@ -9,14 +9,15 @@ var Contact = require('../models/contact');
 router.get('/', function(req, res){
   Contact.find(function(err, contacts) {
     if(err) return res.status(400).send(err);
-    res.render("contactss", {title: "My Contacts!", items: contacts});
+    res.render("index", {title: "My Contacts!", items: contacts});
   });
 });
 
 router.post("/", function(req, res){
-  var clog = rew.body;
+  var contact = req.body;
+  console.log("hello")
   Contact.create(contact, function(err){
-
+    res.status(err ? 400 : 200).send(err || "contact create");
   });
 });
 

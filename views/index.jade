@@ -67,15 +67,15 @@ html(lang='en')
             th.col-xs-1 Remove
             //- th: th
         tbody#list
-        tr
           each item in items
-            td=item.firstName
-            td=item.lastName
-            td=item.phoneNumber
-            td.edit.text-center
-              i.fa.fa-pencil-square-o.fa-lg
-            td.delete.text-center
-              i.fa.fa-trash-o.fa-lg
+            tr
+              td=item.firstName
+              td=item.lastName
+              td=item.phoneNumber
+              td.edit.text-center
+                i.fa.fa-pencil-square-o.fa-lg
+              td.delete.text-center
+                i.fa.fa-trash-o.fa-lg
 
   block scripts
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')

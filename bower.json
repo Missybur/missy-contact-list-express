@@ -1,3 +1,4 @@
+
 {
   "name": "missy-contact-list-express",
   "description": "",
@@ -17,6 +18,8 @@
     "public/bower_components"
   ],
   "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
     "font-awesome": "~4.4.0",
     "sweetalert": "~1.1.3"
   }

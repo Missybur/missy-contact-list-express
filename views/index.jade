@@ -31,10 +31,10 @@ html(lang='en')
           td.edit
             a.edit(href="#")
               i.fa.fa-pencil-square-o
-          td.firstName
-          td.lastName
-          td.phoneNumber
-          td.email
+          td.firstName(contenteditable="true" id="editor")
+          td.lastName(contenteditable="true" id="editor")
+          td.phoneNumber(contenteditable="true" id="editor")
+          td.email(contenteditable="true" id="editor")
           td.remove
             a.remove(href='#')
               i.fa.fa-trash-o

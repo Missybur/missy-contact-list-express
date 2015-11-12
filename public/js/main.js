@@ -11,6 +11,7 @@
     $('#add').click(addContact);
     $('#list').on('change', 'input', checkboxChanged);
     $('#list').on('click', '.remove', removeContact);
+    $("#list").on("click", ".edit", editContact);
   }
 
   function removeContact(e) {
@@ -22,6 +23,10 @@
 
     updateList();
     saveLocalStorage();
+  }
+
+  function editContact(e){
+
   }
 
   function checkboxChanged(e) {
@@ -48,9 +53,7 @@
       email: email,
       deleted: false
     };
-
     contacts.push(contact);
-
     updateList();
     saveLocalStorage();
   }

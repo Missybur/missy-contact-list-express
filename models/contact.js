@@ -1,13 +1,26 @@
+"use strict";
+var fs = require("fs");
 
-// Contact.find = function(cb) {
-//   fs.readFile('db/contacts.json', function (err, data) {
-//     if(err){
-//       cb(err);
-//     } else {
-//       var contacts = JSON.parse(data);
-//       cb(null, contacts);
-//     }
-//   });
-// };
+var Contact = {};
 
-// module.exports = Contacts;
+var db = "db/contacts.json";
+
+Contact.find = function(cb) {
+  fs.readFile(db, function (err, data) {
+    if(err) return cb(err);
+    var contacts = JSON.parse(data);
+    cb(null, contacts);
+  });
+};
+
+Contact.create = function(contact, cb){
+  Contact.find(function(err, contacts){
+    contacts.push(contact);
+    var data = JSON.stringify(contacts);
+    fs.writeFile(db, data, function(err){
+      cb(err || null);
+    });
+  });
+};
+
+module.exports = Contact;

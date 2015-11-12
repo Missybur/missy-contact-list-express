@@ -7,12 +7,17 @@
   ],
   "license": "ISC",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/Missybur/missy-contact-list-express",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "public/bower_components"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "sweetalert": "~1.1.3"
+  }
 }

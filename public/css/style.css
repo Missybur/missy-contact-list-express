@@ -1,99 +1,88 @@
 body {
   text-align: center;
-  background-color: #B8B89F;
-  color: #FF3B77;
+  background-color: #B5E555;
+  color: #8EC447;
+  font-family: 'Lora', serif;
+  font-size: 40px;
 }
 
 h1 {
-  color: #CDFF00;
+  font-size: 45px;
+  color: #EDF7F2;
+  font-family: 'Alice', serif;
 }
 
-#trash {
-  padding-left: 38px;
+.remove {
+  text-align: center;
 }
 
 div {
-  /*margin: 20px;*/
-  padding: 20px;
-  padding-top: 20px;
+  padding: 10px;
+  /*padding-top: 20px;*/
 }
-
-.container {
-  padding-top: 30px;
-}
-
 
 table, #sample {
   padding-top: 15px;
   display: none;
-  color: #FF3B77;
-  border: 2px solid #CDFF00;
+  color: #8EC447;
+  border: 2px solid #B5E555;
 
 }
 
 th {
-  text-align: center;
-}
 
+  text-align: center;
+  border: 2px solid #B5E555;
+
+}
 
 .table {
-  border: 2px solid #CDFF00;
+  border: 3px solid #7FC7BD;
   text-align: left;
   background-color: #fff;
+
 }
 
-tr{
-  /*border: 2px solid #CDFF00;*/
-  color: #FF3B77;
+tr, th {
+  color: #95C92C;
+  border: 2px solid #B5E555;
+
 }
 
 #add {
   width: 45px;
   height: 45px;
   padding-left: 9px;
-  background-color: #FF3B77;
-  color: #CDFF00;
+  background-color: #4CB6C2;
+  color: #EDF7F2;
+  border: 2px solid #EDF7F2;
   border-radius: 50px;
 }
 
-#checkbox {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  color: #FF3B77;
-  text-align: center;
-  color: #CDFF00;
-  border-radius: 50px;
 
-}
-
-button {
-  border: 2px solid #FF3B77;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-}
-
-#edit {
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-  margin-left: 30px;
-  padding: 0px;
+.edit {
   text-align: center;
-  background-color: #FF3B77;
   border: #CDFF00;
 }
 
-#date-in-table {
-  text-align: center;
+#list {
+  border: 2px solid #B5E555;
 
 }
 
 input {
-  background-color: #CDFF00;
-  border: 2px solid #FF3B77;
+  background-color: #7FC7BD;
+  border: 2px solid #EDF7F2;
+  font-size: 30px;
   margin: 10px;
-  display: #FF3B77;
   text-align: center;
+  color: #EDF7F2;
+  display: #EDF7F2;
+}
+
+#firstName, #lastName, #phoneNumber, #email {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+  font-size: 15px;
 }

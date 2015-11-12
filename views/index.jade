@@ -1,24 +1,21 @@
 doctype html
 html(lang='en')
   head
-    title Todo List
-    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='../css/style.css')
-  doctype html
-html(lang='en')
-  head
-    title Todo List
+    title Contact List
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css')
     link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet', integrity='sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Alice|Lora', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='css/style.css')
   body
     .container
       h1 Contact List
-      input#firstName(type='text', placeholder='First Name')
-      input#lastName(type='text', placeholder='Last Name')
-      input#phoneNumber(type='text', placeholder='xxx-xxx-xxxx')
-      input#email(type='email', placeholder='email')
+    .container#table
+      //- input.col-xs-3(placeholder="First Name")
+      input#firstName(class="col-xs-3" type='text', placeholder='First Name')
+      input#lastName(class="col-xs-3" type='text', placeholder='Last Name')
+      input#phoneNumber(class="col-xs-3" type='text', placeholder='xxx-xxx-xxxx')
+      input#email(type='email', placeholder='Email')
       button#add.btn.btn-default Add
       table.table.table-bordered
         thead
@@ -31,15 +28,17 @@ html(lang='en')
             th.col-xs-1 Remove
         tbody#list
         tr#sample
-          td
-            input(type='checkbox')
+          td.edit
+            a.edit(href="#")
+              i.fa.fa-pencil-square-o
           td.firstName
           td.lastName
           td.phoneNumber
           td.email
-          td
+          td.remove
             a.remove(href='#')
-              i.fa.fa-trash
+              i.fa.fa-trash-o
+  block scripts
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
     script(src='js/main.js')

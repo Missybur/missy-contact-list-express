@@ -46,18 +46,17 @@ html(lang='en')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
     link(rel='stylesheet', type='text/css', href='public/bower_components/dist/sweetalert.css')
     link(rel='stylesheet', href='css/style.css')
-  body
+ body
     .container
-      h1 Contact List
-      form(action='/add', method='post')
-        //- input.col-xs-3(placeholder="First Name")
-        input#firstName(class="col-xs-3" type='text' placeholder='First Name' required)
-        input#lastName(class="col-xs-3" type='text' placeholder='Last Name' required)
-        input#phoneNumber(class="col-xs-3" type='text' placeholder='xxx-xxx-xxxx' required)
-        input#email(class="col-xs-3" type='email' placeholder='Email')
-        button#add.btn.btn-default Add
-
-      table.table.table-bordered
+      - var properties = ["firstName", "lastName", "phoneNumber", "email"]
+      .row
+        h1= title
+      .row
+        each prop in properties
+          label #{prop.toUpperCase()}:
+          input(id= prop)
+        button.btn#add Add
+      .row
         thead
           tr
             th.col-xs-1 Edit
@@ -66,21 +65,20 @@ html(lang='en')
             th.col-xs-3 Phone Number:
             th.col-xs-3 Email:
             th.col-xs-1 Remove
+            //- th: th
         tbody#list
-        tr#sample
-          td.edit
-            a.edit(href="#")
-              i.fa.fa-pencil-square-o
-          td.firstName(contenteditable="true" id="editor")
-          td.lastName(contenteditable="true" id="editor")
-          td.phoneNumber(contenteditable="true" id="editor")
-          td.email(contenteditable="true" id="editor" type="email")
-          td.remove
-            a.remove(href='#')
-              i.fa.fa-trash-o
+        tr
+          each item in items
+            td=item.firstName
+            td=item.lastName
+            td=item.phoneNumber
+            td.edit.text-center
+              i.fa.fa-pencil-square-o.fa-lg
+            td.delete.text-center
+              i.fa.fa-trash-o.fa-lg
+
   block scripts
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
-    script(src='bower_components/jquery/dist/jquery.min.js')
     script(src='public/bower_components/dist/sweetalert.min.js')
     script(src='js/contacts/main.js')
